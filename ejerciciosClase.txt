@@ -1,0 +1,82 @@
+Ejercicio 1:
+let a = 5;
+let b = 6;
+
+function multiplicar(a,b){
+    let mul = a+b
+    return mul;
+    
+}
+
+console.log(multiplicar(a,b));
+-------------------------------------------------------
+Ejercicio 2
+
+let a = 5;
+let b = 0;
+
+function dividir(a,b){
+
+    if(b==0){
+        console.log("la división por cero no existe");
+    }else{
+        let mul = a/b
+        return mul;
+    } 
+    
+}
+dividir(a,b);
+
+--------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------
+Ejercicio 4
+
+let myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
+
+function setUserName() {
+  let myName = prompt('Please enter your name.');
+  if(!myName) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  }
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+}
+
+myButton.onclick = function() {
+  setUserName();
+}
+--------------------------------------------
+<h1>CALCULADORA</h1>
+    <form>
+        <div>
+            <div><label>Primer numero    :</label></div>
+            <div><input id="uno" type="text"></div>
+        </div>
+        <div>
+            <div><label>segundo numero    :</label></div>
+            <div><input id="dos" type="text"></div>
+        </div>
+        
+        <br>
+
+        <button id="divi">Dividir</button>
+        <button id="multi">Multiplicar</button>
+
+        <div>
+            <p class="resultado">El resultado es: </p>
+        </div>
