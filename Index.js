@@ -1,4 +1,4 @@
-
+/* Esta función multiplica los valores de los campos "uno" y "dos" */
 function multiplicar() {
     let num1 = document.getElementById("uno").value;
     let num2 = document.getElementById("dos").value;
